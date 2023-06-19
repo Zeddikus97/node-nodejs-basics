@@ -1,4 +1,4 @@
-const parseArgs = async () => {
+const parseArgs = () => {
     let lines = process.argv.slice(2).reduce((lines, arg, index, array)=>{
         const nextValue = array[index+1]
         if(arg.split("--").length>1&&nextValue){
@@ -10,4 +10,4 @@ const parseArgs = async () => {
     // Write your code here 
 };
 
-await parseArgs();
+parseArgs();
