@@ -9,7 +9,7 @@ const performCalculations = async () => {
     //console.log(procs);
 
     const results = await Promise.allSettled(procs.map((proc, index)=>{
-        console.log(index, "index")
+        //console.log(index, "index")
         return new Promise((res, rej)=> {
             const worker = new Worker(`${__dirname}worker.js`, {
                 workerData: index+10
